@@ -1,0 +1,50 @@
+
+.intro {
+    margin-top: 5%;
+    margin-bottom: 5px;
+    font: Overlook;
+}
+
+section .card {
+    background-color:#4b9cd342;
+    border: none;
+    padding: 10px;
+    font: Overlook;
+    margin-bottom: 10px;
+}
+
+section .btn {
+    background-color: #4b9cd3b9;
+    border: none;
+    color: white;
+}
+
+section .btn:hover {
+    border: none;
+    background-color: #1976D2;
+}
+
+.image-container {
+    width: 45%;
+    margin: 0 auto;
+}
+
+.image-container img {
+    width: 100%;
+    padding-top: 60px;
+}
+
+footer .card {
+    border: none;
+}
+
+footer {
+    margin-top: 30px;
+    border-top: 1.5px solid gray;
+}
+
+
+section a {
+    text-decoration: none !important;
+    color: white !important;
+}
