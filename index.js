@@ -425,7 +425,7 @@ let incomeOption = {
     top: 100,
     left: 100,
     right: 200,
-    bottom: 100,
+    bottom: 20,
     containLabel: true
   },
   xAxis: {
@@ -491,7 +491,7 @@ let ageOption = {
     top: 100,
     left: 100,
     right: 200,
-    bottom: 100,
+    bottom: 20,
     containLabel: true
   },
   xAxis: {
@@ -550,7 +550,7 @@ let genderOption = {
     top: 100,
     left: 100,
     right: 200,
-    bottom: 100,
+    bottom: 20,
     containLabel: true
   },
   xAxis: {
@@ -592,10 +592,10 @@ let marriedOption = {
   animation: true,
   animationDuration: 100,
   grid: {
-    top: 100,
+    top: 40,
     left: 100,
     right: 200,
-    bottom: 100,
+    bottom: 20,
     containLabel: true
   },
   xAxis: {
@@ -629,10 +629,10 @@ let originOption = {
   animation: true,
   animationDuration: 100,
   grid: {
-    top: 100,
+    top: 50,
     left: 100,
     right: 200,
-    bottom: 100,
+    bottom: 30,
     containLabel: true
   },
   xAxis: {
@@ -702,10 +702,10 @@ let snapOption = {
   animation: true,
   animationDuration: 100,
   grid: {
-    top: 100,
+    top: 40,
     left: 100,
     right: 200,
-    bottom: 100,
+    bottom: 30,
     containLabel: true
   },
   xAxis: {
@@ -739,10 +739,10 @@ let disabilityOption = {
   animation: true,
   animationDuration: 100,
   grid: {
-    top: 100,
+    top: 40,
     left: 100,
     right: 200,
-    bottom: 100,
+    bottom: 30,
     containLabel: true
   },
   xAxis: {
@@ -776,10 +776,10 @@ let employmentOption = {
   animation: true,
   animationDuration: 100,
   grid: {
-    top: 100,
+    top: 120,
     left: 100,
     right: 200,
-    bottom: 100,
+    bottom: 30,
     containLabel: true
   },
   xAxis: {
@@ -878,10 +878,10 @@ let educationOption = {
   animation: true,
   animationDuration: 100,
   grid: {
-    top: 100,
+    top: 80,
     left: 100,
     right: 215,
-    bottom: 100,
+    bottom: 30,
     containLabel: true
   },
   xAxis: {
@@ -930,10 +930,10 @@ let languageOption = {
   animation: true,
   animationDuration: 100,
   grid: {
-    top: 100,
+    top: 80,
     left: 100,
     right: 215,
-    bottom: 100,
+    bottom: 30,
     containLabel: true
   },
   xAxis: {
