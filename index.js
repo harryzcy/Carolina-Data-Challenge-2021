@@ -302,13 +302,13 @@ let incomeOption = {
       clip: true,
       data: generateIncomeData(linear_regression_income_139_249)
     },
-    {
-      name: 'HIU Income 250-400% FPL',
-      type: 'line',
-      showSymbol: false,
-      clip: true,
-      data: generateIncomeData(linear_regression_income_250_400)
-    },
+    // {
+    //   name: 'HIU Income 250-400% FPL',
+    //   type: 'line',
+    //   showSymbol: false,
+    //   clip: true,
+    //   data: generateIncomeData(linear_regression_income_250_400)
+    // },
     {
       name: 'HIU Income 400% FPL',
       type: 'line',
@@ -406,13 +406,13 @@ let genderOption = {
     show: true,
   },
   series: [
-    {
-      name: 'Male',
-      type: 'line',
-      showSymbol: false,
-      clip: true,
-      data: generateGenderData(linear_regression_gender_male)
-    },
+    // {
+    //   name: 'Male',
+    //   type: 'line',
+    //   showSymbol: false,
+    //   clip: true,
+    //   data: generateGenderData(linear_regression_gender_male)
+    // },
     {
       name: 'Female',
       type: 'line',
