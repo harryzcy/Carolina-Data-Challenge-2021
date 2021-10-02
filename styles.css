@@ -1,31 +1,22 @@
 
-.intro {
-    margin-top: 5%;
+* {
+    font-family: Roboto;
+}
+
+.title {
+    margin-top: 8vh;
     margin-bottom: 5px;
-    font: Overlook;
 }
 
-section .card {
-    background-color:#4b9cd342;
-    border: none;
-    padding: 10px;
-    font: Overlook;
-    margin-bottom: 10px;
+.intro {
+    margin-top: 5vh;
+    margin-right: 5vw;
+    font-size: larger;
 }
 
-section .btn {
-    background-color: #4b9cd3b9;
-    border: none;
-    color: white;
-}
-
-section .btn:hover {
-    border: none;
-    background-color: #1976D2;
-}
 
 .image-container {
-    width: 45%;
+    width: 60%;
     margin: 0 auto;
 }
 
