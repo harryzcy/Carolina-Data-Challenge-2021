@@ -108,18 +108,18 @@ function addTableHeader(dom, headerRow, headerColor) {
   thead.innerHTML = `<tr style="background: ${headerColor}"><td></td>${cells}</tr>`;
 }
 
-function addTableBody(dom, columnNames, data, headerColor) {
+function addTableBody(dom, columnNames, data, headerColor, includeFirst = false) {
   if (!dom) return;
   let tbody = dom.querySelector('tbody');
 
   let num = columnNames.length;
   let html = columnNames.map((value, index) => {
     let row = '';
-    if (index == 0) {
+    if (index == 0 && !includeFirst) {
       row = '<td style="background-color: #efefef"></td>'.repeat(num);
     } else {
       for (let i = 0; i < num; i++) {
-        let value = data[index - 1][i] || '';
+        let value = data[includeFirst ? index : index - 1][i] || '';
         let color = value == '' ? '#efefef' : `rgba(87, 187, 138, ${value})`;
         row += `<td class="text-center align-middle" style="background-color: ${color}">${value}</td>`
       }
@@ -159,6 +159,10 @@ addTableBody(tableGroupEducationDom, groupCategories.education, groupData.educat
 let tableGroupLanguageDom = document.getElementById('table-group-language');
 addTableHeader(tableGroupLanguageDom, groupCategories.language, groupColors.language);
 addTableBody(tableGroupLanguageDom, groupCategories.language, groupData.language, groupColors.language);
+
+let tableGroupTotalDom = document.getElementById('table-group-total');
+addTableHeader(tableGroupTotalDom, groupCategories.total, groupColors.total);
+addTableBody(tableGroupTotalDom, groupCategories.total, groupData.total, groupColors.total, true);
 
 
 let regressionIncomeDom = document.getElementById('linear-regression-income');
