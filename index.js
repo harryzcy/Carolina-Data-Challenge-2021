@@ -1,11 +1,39 @@
 let groupColors = {
   income: '#fff2cc',
+  age: '#d0e2f4',
+  origin: '#ead1dc',
+  employment: '#fce5cd',
+  education: '#c9daf9',
+  language: '#d0e0e3',
 }
 
 let groupCategories = {
   income: [
-    'HIU Income < 100% FPL', 'HIU Income 100-138% FPL', 'HIU Income 139-249% FPL', 
+    'HIU Income < 100% FPL', 'HIU Income 100-138% FPL', 'HIU Income 139-249% FPL',
     'HIU Income 250-400% FPL', 'HIU Income 400% FPL'
+  ],
+  age: [
+    'Age 0-18', 'Age 19-34', 'Age 35-49', 'Age 50-64'
+  ],
+  origin: [
+    'Spanish/Hispanic/Latino Origin', 'White Non-Latino', 'Black Non-Latino',
+    'Asian / Native-Hawaiian / Pac Islander', 'American Indian / Alaska Native',
+    'Multi-racial or Other'
+  ],
+  employment: [
+    'Employed in Agriculture Industry', 'Employed in Mining/Construction Industry',
+    'Employed in Manufacturing Industry', 'Employed in Trade Industry',
+    'Employed in Info/Finance Industry', 'Employed in Education/Health Industry',
+    'Employed in Entertainment Industry', 'Employed in Service Industry',
+    'Employed in Military/Public Industry'
+  ],
+  education: [
+    'Less than High School', 'High School Diploma', 'College Grad'
+  ],
+  language: [
+    'No English Speaking Adults in HH', 'English Spoken in HH', 'Spanish Spoken in HH',
+    'Chinese Spoken in HH', 'Korean Spoken in HH', 'Vietnamese Spoken in HH',
+    'Tagalog Spoken in HH', 'Russian Spoken in HH', 'Other Language Spoken in HH'
   ],
 }
 
@@ -15,6 +43,42 @@ let groupData = {
     [0.2112, 0.0003],
     [0.7425, 0.1344, 0.0841],
     [0.4772, 0.4701, 0.0187, 0.2287],
+  ],
+  age: [
+    [0.1585],
+    [0.3655, 0.0588],
+    [0.1957, 0.2235, 0.1148],
+  ],
+  origin: [
+    [0.4065],
+    [0.0382, 0.1358],
+    [0.0207, 0.1676, 0.0245],
+    [0.0006, 0.0102, 0.1349, 0.0185],
+    [0.0123, 0.0683, 0.0540, 0.4571, 0.0824],
+  ],
+  employment: [
+    [0.1437],
+    [0.0521, 0.0001],
+    [0.0801, 0.0198, 0.0336],
+    [0.0891, 0.1087, 0.0216, 0.0037],
+    [0.0422, 0.0025, 0.0250, 0.0044, 0.0054],
+    [0.0360, 0.0931, 0.0073, 0.0521, 0.0222, 0.0259],
+    [0.0016, 0.0005, 0.0923, 0.0623, 0.0600, 0.0058, 0.0000],
+    [0.0547, 0.2179, 0.2480, 0.0882, 0.0429, 0.0541, 0.0404, 0.1246],
+  ],
+  education: [
+    [0.1115],
+    [0.3613, 0.2972],
+  ],
+  language: [
+    [0.9382],
+    [0.8472, 0.8585],
+    [0.1856, 0.2397, 0.1016],
+    [0.2243, 0.2848, 0.2693, 0.0267],
+    [0.0288, 0.0577, 0.0617, 0.0267, 0.4171],
+    [0.0022, 0.0042, 0.0182, 0.0306, 0.0013, 0.0013],
+    [0.1432, 0.1392, 0.0691, 0.4502, 0.0013, 0.0013, 0.0004],
+    [0.2758, 0.3255, 0.0643, 0.1596, 0.0280, 0.0027, 0.1948, 0.0477],
   ],
 };
 
@@ -52,7 +116,11 @@ function addTableBody(dom, columnNames, data, headerColor) {
 
 let tableGroupIncomeDom = document.getElementById('table-group-income');
 addTableHeader(tableGroupIncomeDom, groupCategories.income, groupColors.income);
-addTableBody(tableGroupIncomeDom, groupCategories.income, groupData.income, groupColors.income)
+addTableBody(tableGroupIncomeDom, groupCategories.income, groupData.income, groupColors.income);
+
+let tableGroupAgeDom = document.getElementById('table-group-age');
+addTableHeader(tableGroupAgeDom, groupCategories.age, groupColors.age);
+addTableBody(tableGroupAgeDom, groupCategories.age, groupData.income, groupColors.age);
 
 
 let regressionIncomeDom = document.getElementById('linear-regression-income');
