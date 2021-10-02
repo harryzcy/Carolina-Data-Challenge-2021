@@ -144,21 +144,9 @@ let tableGroupGenderDom = document.getElementById('table-group-gender');
 addTableHeader(tableGroupGenderDom, groupCategories.gender, groupColors.gender);
 addTableBody(tableGroupGenderDom, groupCategories.gender, groupData.gender, groupColors.gender);
 
-// let tableGroupMarriedDom = document.getElementById('table-group-married');
-// addTableHeader(tableGroupMarriedDom, groupCategories.married, groupColors.married);
-// addTableBody(tableGroupMarriedDom, groupCategories.married, groupData.married, groupColors.married);
-
 let tableGroupOriginDom = document.getElementById('table-group-origin');
 addTableHeader(tableGroupOriginDom, groupCategories.origin, groupColors.origin);
 addTableBody(tableGroupOriginDom, groupCategories.origin, groupData.origin, groupColors.origin);
-
-// let tableGroupSNAPDom = document.getElementById('table-group-snap');
-// addTableHeader(tableGroupSNAPDom, groupCategories.snap, groupColors.snap);
-// addTableBody(tableGroupSNAPDom, groupCategories.snap, groupData.snap, groupColors.snap);
-
-// let tableGroupDisabilityDom = document.getElementById('table-group-disability');
-// addTableHeader(tableGroupDisabilityDom, groupCategories.disability, groupColors.disability);
-// addTableBody(tableGroupDisabilityDom, groupCategories.disability, groupData.disability, groupColors.disability);
 
 let tableGroupEmploymentDom = document.getElementById('table-group-employment');
 addTableHeader(tableGroupEmploymentDom, groupCategories.employment, groupColors.employment);
