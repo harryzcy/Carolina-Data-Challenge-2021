@@ -35,6 +35,10 @@ let groupCategories = {
     'Chinese Spoken in HH', 'Korean Spoken in HH', 'Vietnamese Spoken in HH',
     'Tagalog Spoken in HH', 'Russian Spoken in HH', 'Other Language Spoken in HH'
   ],
+  total:[
+    'Income','Age','Gender','Married','Child in Family','Origin','SNAP Recipient',
+    'Disability','Full Time Worker in Family','Employment','Education','Spoken Language'
+  ],
 }
 
 let groupData = {
@@ -80,6 +84,20 @@ let groupData = {
     [0.1432, 0.1392, 0.0691, 0.4502, 0.0013, 0.0013, 0.0004],
     [0.2758, 0.3255, 0.0643, 0.1596, 0.0280, 0.0027, 0.1948, 0.0477],
   ],
+  total:[
+    [null,  0.1442,  0.0612,  0.0539,  0.0765,  0.2723,  0.2551,  0.1872,  0.3717,  0.3949,  0.3254,  0.2411],
+    [0.1347,  null,  0.1436,  0.0291,  0.2899,  0.3344,  0.0459,  0.0104,  0.0946,  0.4411,  0.1254,  0.1739],
+    [0.1739,  0.4623,  null,  0.3801,  0.4187,  0.1733,  0.0420,  0.0920,  0.0595,  0.4178,  0.1988,  0.2693],
+    [0.2209,  0.4697,  0.4053,  null,  0.1569,  0.6469,  0.0142,  0.0024,  0.2525,  0.6013,  0.1315,  0.1466],
+    [0.3419,  0.7788,  0.4190,  0.1569,  null,  0.3363,  0.0135,  0.0128,  0.2670,  0.5831,  0.1054,  0.1549],
+    [0.1744,  0.1901,  0.0496,  0.1245,  0.0519,  null,  0.0272,  0.0601,  0.1355,  0.3959,  0.2097,  0.5020],
+    [0.4818,  0.1270,  0.0465,  0.0142,  0.0135,  0.1521,  null,  0.2209,  0.2952,  0.2098,  0.1582,  0.1135],
+    [0.3481,  0.0489,  0.0987,  0.0024,  0.0128,  0.2524,  0.2209,  null,  0.1106,  0.3541,  0.2647,  0.3915],
+    [0.8477,  0.2559,  0.0615,  0.2525,  0.2670,  0.6259,  0.2952,  0.1106,  null,  0.4103,  0.1561,  0.1127],
+    [0.1650,  0.1759,  0.0699,  0.1298,  0.0603,  0.2890,  0.0186,  0.0409,  0.0713,  null,  0.1885,  0.2214],
+    [0.4155,  0.1883,  0.0951,  0.0598,  0.0470,  0.3390,  0.0854,  0.1281,  0.0721,  0.5291,  null,  0.3946],
+    [0.1026,  0.0483,  0.0204,  0.0131,  0.0083,  0.4702,  0.0129,  0.1161,  0.0087,  0.2852,  0.2429,  null],
+  ],
 };
 
 function addTableHeader(dom, headerRow, headerColor) {
@@ -120,7 +138,39 @@ addTableBody(tableGroupIncomeDom, groupCategories.income, groupData.income, grou
 
 let tableGroupAgeDom = document.getElementById('table-group-age');
 addTableHeader(tableGroupAgeDom, groupCategories.age, groupColors.age);
-addTableBody(tableGroupAgeDom, groupCategories.age, groupData.income, groupColors.age);
+addTableBody(tableGroupAgeDom, groupCategories.age, groupData.age, groupColors.age);
+
+let tableGroupGenderDom = document.getElementById('table-group-gender');
+addTableHeader(tableGroupGenderDom, groupCategories.gender, groupColors.gender);
+addTableBody(tableGroupGenderDom, groupCategories.gender, groupData.gender, groupColors.gender);
+
+// let tableGroupMarriedDom = document.getElementById('table-group-married');
+// addTableHeader(tableGroupMarriedDom, groupCategories.married, groupColors.married);
+// addTableBody(tableGroupMarriedDom, groupCategories.married, groupData.married, groupColors.married);
+
+let tableGroupOriginDom = document.getElementById('table-group-origin');
+addTableHeader(tableGroupOriginDom, groupCategories.origin, groupColors.origin);
+addTableBody(tableGroupOriginDom, groupCategories.origin, groupData.origin, groupColors.origin);
+
+// let tableGroupSNAPDom = document.getElementById('table-group-snap');
+// addTableHeader(tableGroupSNAPDom, groupCategories.snap, groupColors.snap);
+// addTableBody(tableGroupSNAPDom, groupCategories.snap, groupData.snap, groupColors.snap);
+
+// let tableGroupDisabilityDom = document.getElementById('table-group-disability');
+// addTableHeader(tableGroupDisabilityDom, groupCategories.disability, groupColors.disability);
+// addTableBody(tableGroupDisabilityDom, groupCategories.disability, groupData.disability, groupColors.disability);
+
+let tableGroupEmploymentDom = document.getElementById('table-group-employment');
+addTableHeader(tableGroupEmploymentDom, groupCategories.employment, groupColors.employment);
+addTableBody(tableGroupEmploymentDom, groupCategories.employment, groupData.employment, groupColors.employment);
+
+let tableGroupEducationDom = document.getElementById('table-group-education');
+addTableHeader(tableGroupEducationDom, groupCategories.education, groupColors.education);
+addTableBody(tableGroupEducationDom, groupCategories.education, groupData.education, groupColors.education);
+
+let tableGroupLanguageDom = document.getElementById('table-group-language');
+addTableHeader(tableGroupLanguageDom, groupCategories.language, groupColors.language);
+addTableBody(tableGroupLanguageDom, groupCategories.language, groupData.language, groupColors.language);
 
 
 let regressionIncomeDom = document.getElementById('linear-regression-income');
