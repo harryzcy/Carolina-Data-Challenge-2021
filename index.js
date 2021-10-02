@@ -1,3 +1,58 @@
+let groupColors = {
+  income: '#fff2cc',
+}
+
+let groupCategories = {
+  income: [
+    'HIU Income < 100% FPL', 'HIU Income 100-138% FPL', 'HIU Income 139-249% FPL', 
+    'HIU Income 250-400% FPL', 'HIU Income 400% FPL'
+  ],
+}
+
+let groupData = {
+  income: [
+    [0.1570],
+    [0.2112, 0.0003],
+    [0.7425, 0.1344, 0.0841],
+    [0.4772, 0.4701, 0.0187, 0.2287],
+  ],
+};
+
+function addTableHeader(dom, headerRow, headerColor) {
+  if (!dom) return;
+  let thead = dom.querySelector('thead');
+
+  let cells = headerRow.map(text => `<th>${text}</td>`).join('');
+  thead.innerHTML = `<tr style="background: ${headerColor}"><td></td>${cells}</tr>`;
+}
+
+function addTableBody(dom, columnNames, data, headerColor) {
+  if (!dom) return;
+  let tbody = dom.querySelector('tbody');
+
+  let num = columnNames.length;
+  let html = columnNames.map((value, index) => {
+    let row = '';
+    if (index == 0) {
+      row = '<td style="background-color: #efefef"></td>'.repeat(num);
+    } else {
+      for (let i = 0; i < num; i++) {
+        let value = data[index - 1][i] || '';
+        let color = value == '' ? '#efefef' : `rgba(87, 187, 138, ${value})`;
+        row += `<td class="text-center align-middle" style="background-color: ${color}">${value}</td>`
+      }
+    }
+    row = `<td style="background: ${headerColor}">${value}</td>` + row;
+    console.log(row);
+
+    return `<tr>${row}</tr>`
+  }).join('');
+  tbody.innerHTML = html;
+}
+
+let tableGroupIncomeDom = document.getElementById('table-group-income');
+addTableHeader(tableGroupIncomeDom, groupCategories.income, groupColors.income);
+addTableBody(tableGroupIncomeDom, groupCategories.income, groupData.income, groupColors.income)
 
 
 let regressionIncomeDom = document.getElementById('linear-regression-income');
@@ -489,7 +544,7 @@ let originOption = {
   },
   series: [
     {
-      name:'Spanish/Hispanic/Latino Origin',
+      name: 'Spanish/Hispanic/Latino Origin',
       type: 'line',
       showSymbol: false,
       clip: true,
@@ -636,14 +691,14 @@ let employmentOption = {
   },
   series: [
     {
-      name:'Employed in Agriculture Industry',
+      name: 'Employed in Agriculture Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_agriculture)
     },
     {
-      name:'Employed in Mining/Construction Industry',
+      name: 'Employed in Mining/Construction Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
@@ -657,49 +712,49 @@ let employmentOption = {
       data: generateEmploymentData(linear_regression_employment_mining_construction)
     },
     {
-      name:'Employed in Manufacturing Industry',
+      name: 'Employed in Manufacturing Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_manufacturing)
     },
     {
-      name:'Employed in Trade Industry',
+      name: 'Employed in Trade Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_trade)
     },
     {
-      name:'Employed in Info/Finance Industry',
+      name: 'Employed in Info/Finance Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_info_finance)
     },
     {
-      name:'Employed in Education/Health Industry',
+      name: 'Employed in Education/Health Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_education_health)
     },
     {
-      name:'Employed in Entertainment Industry',
+      name: 'Employed in Entertainment Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_entertainment)
     },
     {
-      name:'Employed in Service Industry',
+      name: 'Employed in Service Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_service)
     },
     {
-      name:'Employed in Military/Public Industry',
+      name: 'Employed in Military/Public Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
@@ -738,7 +793,7 @@ let educationOption = {
   },
   series: [
     {
-      name:'Less than High School',
+      name: 'Less than High School',
       type: 'line',
       showSymbol: false,
       clip: true,
@@ -752,7 +807,7 @@ let educationOption = {
       data: generateEducationData(linear_regression_education_high_school)
     },
     {
-      name:'College Grad',
+      name: 'College Grad',
       type: 'line',
       showSymbol: false,
       clip: true,
@@ -790,56 +845,56 @@ let languageOption = {
   },
   series: [
     {
-      name:'English Spoken in HH',
+      name: 'English Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_english)
     },
     {
-      name:'Spanish Spoken in HH',
+      name: 'Spanish Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_spanish)
     },
     {
-      name:'Chinese Spoken in HH',
+      name: 'Chinese Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_chinese)
     },
     {
-      name:'Korean Spoken in HH',
+      name: 'Korean Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_korean)
     },
     {
-      name:'Vietnamese Spoken in HH',
+      name: 'Vietnamese Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_vietnamese)
     },
     {
-      name:'Tagalog Spoken in HH',
+      name: 'Tagalog Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_tagalog)
     },
     {
-      name:'Russian Spoken in HH',
+      name: 'Russian Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_russian)
     },
     {
-      name:'Other Language Spoken in HH',
+      name: 'Other Language Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
