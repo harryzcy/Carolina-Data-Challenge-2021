@@ -40,6 +40,15 @@ section a {
     color: white !important;
 }
 
+.table-wrapper {
+    max-width: 100%;
+}
+
+table.table {
+    max-width: 100%;
+    overflow-x: scroll;
+    font-size: 10px;
+}
 
 .double-card {
     position: relative;
