@@ -32,16 +32,16 @@ let regressionLanguageChart = echarts.init(regressionLanguageDom);
 
 
 var dimension = {
-  income: {x: 0.5, y: 0.2},
-  age: {x: 0.6, y: 0.25},
-  gender: {x: 1, y: 0.5},
-  married: {x: 0.6, y: 0.25},
-  origin: {x: 0.6, y: 0.25},
-  snap: {x: 0.6, y: 0.25},
-  disability: {x: 0.6, y: 0.5},
-  employment: {x: 0.5, y: 0.25},
-  education: {x: 0.6, y: 0.25},
-  language: {x: 0.6, y: 0.25},
+  income: { x: 0.5, y: 0.2 },
+  age: { x: 0.6, y: 0.25 },
+  gender: { x: 1, y: 0.5 },
+  married: { x: 0.6, y: 0.25 },
+  origin: { x: 0.6, y: 0.25 },
+  snap: { x: 0.6, y: 0.25 },
+  disability: { x: 0.6, y: 0.5 },
+  employment: { x: 0.5, y: 0.25 },
+  education: { x: 0.6, y: 0.25 },
+  language: { x: 0.6, y: 0.25 },
 }
 
 function linear_regression_income_100(x) {
@@ -681,7 +681,7 @@ let employmentOption = {
       clip: true,
       data: generateEmploymentData(linear_regression_employment_military_public)
     },
-    
+
   ]
 };
 
