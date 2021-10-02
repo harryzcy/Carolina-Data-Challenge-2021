@@ -355,18 +355,21 @@ let ageOption = {
       data: generateAgeData(linear_regression_age_0_18)
     },
     {
+      name: 'Age 19-34',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateAgeData(linear_regression_age_19_34)
     },
     {
+      name: 'Age 35-49',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateAgeData(linear_regression_age_35_49)
     },
     {
+      name: 'Age 50-54',
       type: 'line',
       showSymbol: false,
       clip: true,
@@ -404,12 +407,14 @@ let genderOption = {
   },
   series: [
     {
+      name: 'Male',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateGenderData(linear_regression_gender_male)
     },
     {
+      name: 'Female',
       type: 'line',
       showSymbol: false,
       clip: true,
@@ -429,7 +434,7 @@ let marriedOption = {
     containLabel: true
   },
   xAxis: {
-    name: 'Percentage of Married',
+    name: 'Married Percantage',
     minorTick: {
       show: true
     },
@@ -484,36 +489,42 @@ let originOption = {
   },
   series: [
     {
+      name:'Spanish/Hispanic/Latino Origin',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateOriginData(linear_regression_origin_spanish)
     },
     {
+      name: 'White Non-Latino',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateOriginData(linear_regression_origin_white_non_latino)
     },
     {
+      name: 'Black Non-Latino',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateOriginData(linear_regression_origin_black_non_latino)
     },
     {
+      name: 'Asian / Native-Hawaiian / Pac Islander',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateOriginData(linear_regression_origin_asian_hawaiian_pac)
     },
     {
+      name: 'American Indian / Alaska Native',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateOriginData(linear_regression_origin_native)
     },
     {
+      name: 'Multi-racial or Other',
       type: 'line',
       showSymbol: false,
       clip: true,
@@ -533,7 +544,7 @@ let snapOption = {
     containLabel: true
   },
   xAxis: {
-    name: 'Percentage in SNAP Group',
+    name: 'Percentage Receiving SNAP',
     minorTick: {
       show: true
     },
@@ -570,7 +581,7 @@ let disabilityOption = {
     containLabel: true
   },
   xAxis: {
-    name: 'Percentage in Disability Group',
+    name: 'Percentage with Disability',
     minorTick: {
       show: true
     },
@@ -620,62 +631,75 @@ let employmentOption = {
       show: true
     },
   },
+  legend: {
+    show: true,
+  },
   series: [
     {
+      name:'Employed in Agriculture Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_agriculture)
     },
     {
+      name:'Employed in Mining/Construction Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_agriculture)
     },
     {
+      name: 'Employed in Manufacturing Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_mining_construction)
     },
     {
+      name:'Employed in Manufacturing Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_manufacturing)
     },
     {
+      name:'Employed in Trade Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_trade)
     },
     {
+      name:'Employed in Info/Finance Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_info_finance)
     },
     {
+      name:'Employed in Education/Health Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_education_health)
     },
     {
+      name:'Employed in Entertainment Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_entertainment)
     },
     {
+      name:'Employed in Service Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEmploymentData(linear_regression_employment_service)
     },
     {
+      name:'Employed in Military/Public Industry',
       type: 'line',
       showSymbol: false,
       clip: true,
@@ -714,18 +738,21 @@ let educationOption = {
   },
   series: [
     {
+      name:'Less than High School',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEducationData(linear_regression_education_lt_high_school)
     },
     {
+      name: 'High School Diploma',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateEducationData(linear_regression_education_high_school)
     },
     {
+      name:'College Grad',
       type: 'line',
       showSymbol: false,
       clip: true,
@@ -763,48 +790,56 @@ let languageOption = {
   },
   series: [
     {
+      name:'English Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_english)
     },
     {
+      name:'Spanish Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_spanish)
     },
     {
+      name:'Chinese Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_chinese)
     },
     {
+      name:'Korean Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_korean)
     },
     {
+      name:'Vietnamese Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_vietnamese)
     },
     {
+      name:'Tagalog Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_tagalog)
     },
     {
+      name:'Russian Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateLanguageData(linear_regression_language_russian)
     },
     {
+      name:'Other Language Spoken in HH',
       type: 'line',
       showSymbol: false,
       clip: true,
