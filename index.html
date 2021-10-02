@@ -76,27 +76,6 @@
                 understand this issue and its related factors, hoping to give policymakers insights into improving
                 health insurance conditions.
             </p>
-            <p>
-                Our method...
-            </p>
-            <p>
-                Using python, we determine the linear regression model between percentage uninsured in the United States
-                and seven different
-                groups of factors：
-            </p>
-            <ul>
-                <li>Income</li>
-                <li>Age</li>
-                <li>Gender</li>
-                <li>Ethnicity</li>
-                <li>Employment</li>
-                <li>Employment by Industry</li>
-                <li>Education Level</li>
-                <li>Spoken Language</li>
-            </ul>
-            <p>
-                Next, we use Echart to visualize our data.
-            </p>
         </div>
 
         <section class="row p-4">
@@ -196,6 +175,12 @@
                 </div>
             </div>
 
+            <div class="col-sm-8 offset-sm-2">
+                To eliminate the variables with high linearity, we have defined our threshold to be 0.7, filtering out the ones exceeding this value.
+                Among two colinear variables, 
+                we used the R<sup>2</sup> value obtained from linear regression between the variable and Uninsured Percentage to determine how significant the variable is, 
+                and consequently drop the one with a lower R<sup>2</sup>.
+            </div>
         </section>
 
         <section class="row">
@@ -205,18 +190,8 @@
                     Use in the Model. Specifically, We Drop Child in Family and Full Time Worker in Family
                 </div>
             </div>
+            <div class="w-100"></div>
 
-        </section>
-
-        <section class="row">
-            <div class="col-sm-6 offset-sm-3">
-                <div class="double-card">
-                    6. Determine the Correlations Between Uninsured population and the Selected Variables
-                </div>
-            </div>
-        </section>
-
-        <section class="row">
             <div class="col-sm-12">
                 <span>Linear Regression: Income</span>
             </div>
@@ -303,6 +278,14 @@
             </div>
             <div class="col-sm-12">
                 <div id="linear-regression-language" style="height: 600px;"></div>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="double-card">
+                    6. Determine the Correlations Between Uninsured population and the Selected Variables
+                </div>
             </div>
         </section>
 
