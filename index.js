@@ -255,6 +255,7 @@ function generateLanguageData(func) {
 
 let incomeOption = {
   animation: true,
+  animationDuration: 100,
   grid: {
     top: 100,
     left: 100,
@@ -276,32 +277,40 @@ let incomeOption = {
       show: true
     },
   },
+  legend: {
+    show: true,
+  },
   series: [
     {
+      name: 'HIU Income < 100% FPL',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateIncomeData(linear_regression_income_100)
     },
     {
+      name: 'HIU Income 100-138% FPL',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateIncomeData(linear_regression_income_100_138)
     },
     {
+      name: 'HIU Income 139-249% FPL',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateIncomeData(linear_regression_income_139_249)
     },
     {
+      name: 'HIU Income 250-400% FPL',
       type: 'line',
       showSymbol: false,
       clip: true,
       data: generateIncomeData(linear_regression_income_250_400)
     },
     {
+      name: 'HIU Income 400% FPL',
       type: 'line',
       showSymbol: false,
       clip: true,
@@ -312,6 +321,7 @@ let incomeOption = {
 
 let ageOption = {
   animation: true,
+  animationDuration: 100,
   grid: {
     top: 100,
     left: 100,
@@ -333,8 +343,12 @@ let ageOption = {
       show: true
     },
   },
+  legend: {
+    show: true,
+  },
   series: [
     {
+      name: 'Age 0-18',
       type: 'line',
       showSymbol: false,
       clip: true,
@@ -363,6 +377,7 @@ let ageOption = {
 
 let genderOption = {
   animation: true,
+  animationDuration: 100,
   grid: {
     top: 100,
     left: 100,
@@ -384,6 +399,9 @@ let genderOption = {
       show: true
     },
   },
+  legend: {
+    show: true,
+  },
   series: [
     {
       type: 'line',
@@ -402,6 +420,7 @@ let genderOption = {
 
 let marriedOption = {
   animation: true,
+  animationDuration: 100,
   grid: {
     top: 100,
     left: 100,
@@ -423,6 +442,9 @@ let marriedOption = {
       show: true
     },
   },
+  legend: {
+    show: true,
+  },
   series: [
     {
       type: 'line',
@@ -435,6 +457,7 @@ let marriedOption = {
 
 let originOption = {
   animation: true,
+  animationDuration: 100,
   grid: {
     top: 100,
     left: 100,
@@ -455,6 +478,9 @@ let originOption = {
     minorTick: {
       show: true
     },
+  },
+  legend: {
+    show: true,
   },
   series: [
     {
@@ -498,6 +524,7 @@ let originOption = {
 
 let snapOption = {
   animation: true,
+  animationDuration: 100,
   grid: {
     top: 100,
     left: 100,
@@ -519,6 +546,9 @@ let snapOption = {
       show: true
     },
   },
+  legend: {
+    show: true,
+  },
   series: [
     {
       type: 'line',
@@ -531,6 +561,7 @@ let snapOption = {
 
 let disabilityOption = {
   animation: true,
+  animationDuration: 100,
   grid: {
     top: 100,
     left: 100,
@@ -552,6 +583,9 @@ let disabilityOption = {
       show: true
     },
   },
+  legend: {
+    show: true,
+  },
   series: [
     {
       type: 'line',
@@ -564,6 +598,7 @@ let disabilityOption = {
 
 let employmentOption = {
   animation: true,
+  animationDuration: 100,
   grid: {
     top: 100,
     left: 100,
@@ -652,6 +687,7 @@ let employmentOption = {
 
 let educationOption = {
   animation: true,
+  animationDuration: 100,
   grid: {
     top: 100,
     left: 100,
@@ -672,6 +708,9 @@ let educationOption = {
     minorTick: {
       show: true
     },
+  },
+  legend: {
+    show: true,
   },
   series: [
     {
@@ -697,6 +736,7 @@ let educationOption = {
 
 let languageOption = {
   animation: true,
+  animationDuration: 100,
   grid: {
     top: 100,
     left: 100,
@@ -717,6 +757,9 @@ let languageOption = {
     minorTick: {
       show: true
     },
+  },
+  legend: {
+    show: true,
   },
   series: [
     {
